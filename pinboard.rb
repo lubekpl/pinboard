@@ -9,6 +9,7 @@ set :port, 4567
 set :views, File.dirname(__FILE__) + "/views"
 set :public, 'public'
 set :static, true
+set :run, true
 
 
 use Rack::Auth::Basic, "Restricted Area" do |username, password|
