@@ -3,11 +3,12 @@ Dotenv.load
 require 'sinatra'
 require 'httparty'
 require 'json'
-require 'pry'
-require 'nokogiri'
 
-set :bind, '127.0.0.1'
-set :public_folder, "assets"
+set :bind, '0.0.0.0'
+set :port, 4567
+set :views, File.dirname(__FILE__) + "/views"
+set :public, 'public'
+set :static, true
 
 
 use Rack::Auth::Basic, "Restricted Area" do |username, password|
