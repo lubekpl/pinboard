@@ -13,7 +13,7 @@ set :run, true
 
 
 use Rack::Auth::Basic, "Restricted Area" do |username, password|
-  username == ENV['PINBOARD_USERNAME'] and password == ENV['PINBOARD_PASSWORD']
+  username == ENV["PINBOARD_USERNAME"] and password == ENV['PINBOARD_PASSWORD']
 end
 
 get '/' do
